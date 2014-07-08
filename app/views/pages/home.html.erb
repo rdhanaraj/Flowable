@@ -1,0 +1,25 @@
+<% if !user_signed_in? %>
+  <div class="well">
+    <div class="text-center">
+      <h1>Have business operations flow with Flowable.</h1><br>
+      <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary' %>
+      <%= link_to 'Login', new_user_session_path, class: 'btn btn-default'%>
+    </div>  
+  </div>
+
+  <style type="">
+    h1 {
+      margin-top: 5px;
+    }
+  </style>
+<% else %>
+  <center class="well"> 
+    <% if current_user.admin? %>
+      <h3>No flows or flowables at this time.</h3>
+    <% else %>
+      <h3>No flowables at this time.</h3>
+    <% end -%>
+    <br>
+    <%= link_to 'Sign out', destroy_user_session_path, class: 'btn btn-primary', method: 'delete' %>
+  </center>
+<% end -%>
