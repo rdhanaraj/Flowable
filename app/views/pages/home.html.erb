@@ -1,19 +1,21 @@
-<% if !user_signed_in? %>
+<% unless user_signed_in? or admin_signed_in? %>
   <div class="well">
     <div class="text-center">
       <h1>Have business operations flow with Flowable.</h1><br>
       <%= link_to 'Sign up', new_admin_registration_path, class: 'btn btn-primary' %>
-      <%= link_to 'Login', new_user_session_path, class: 'btn btn-default'%>
+      <%= link_to 'Login', new_admin_session_path, class: 'btn btn-default'%>
     </div>  
   </div>
 <% else %>
   <center class="well"> 
-    <% if current_user.admin? %>
-      <h3>No flows or flowables at this time.</h3>
+    <% if admin_signed_in? %>
+      <h3>No flows or flowables at this time.</h3><br>
+      <%= link_to 'Sign out', destroy_admin_session_path, class: 'btn btn-primary' %>
     <% else %>
-      <h3>No flowables at this time.</h3>
+      <h3>No flowables at this time.</h3><br>
+      <%= link_to 'Sign out', destroy_user_session_path, class: 'btn btn-primary' %>
     <% end -%>
-    <br>
-    <%= link_to 'Sign out', '#', class: 'btn btn-primary', method: 'delete' %>
   </center>
 <% end -%>
+
+<button type="button" class="btn btn-default" rel="tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">Bottom</button>
