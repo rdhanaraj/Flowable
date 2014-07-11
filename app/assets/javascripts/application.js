@@ -19,6 +19,8 @@ $(document).ready(function(){
     }, function() {
         $(this).find('.dropdown-menu').first().stop(true, true).delay(50).slideUp()
     });
+
+    $(".alert").alert()
 })
 //= require turbolinks
 //= require_tree .
