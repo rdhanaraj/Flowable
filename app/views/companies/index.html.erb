@@ -1,0 +1,12 @@
+<div class="col-md-4 col-md-offset-4 well">
+  <center>
+<h4>Your companies</h1><hr>
+  <% @companies.each do |company| %>
+    <%= link_to company.name, company %><br>
+  <% end %>
+
+<hr>
+<%= link_to 'Add Company', new_company_path, class: 'btn btn-primary' %>
+</center>
+
+</div>
