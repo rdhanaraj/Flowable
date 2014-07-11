@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap.min
 $(document).ready(function(){
+    $('.btn').tooltip();
     $('.navbar .dropdown').hover(function() {
         $(this).find('.dropdown-menu').first().stop(true, true).delay(200).slideDown();
     }, function() {
