@@ -10,10 +10,10 @@
   <center class="well"> 
     <% if admin_signed_in? %>
       <h3>No flows or flowables at this time.</h3><br>
-      <%= link_to 'Sign out', destroy_admin_session_path, class: 'btn btn-primary' %>
+      <%= link_to 'Sign out', destroy_admin_session_path, class: 'btn btn-primary', method: :delete %>
     <% else %>
       <h3>No flowables at this time.</h3><br>
-      <%= link_to 'Sign out', destroy_user_session_path, class: 'btn btn-primary' %>
+      <%= link_to 'Sign out', destroy_user_session_path, class: 'btn btn-primary', method: :delete %>
     <% end -%>
   </center>
 <% end -%>
