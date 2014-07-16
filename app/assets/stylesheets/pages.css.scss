@@ -1,8 +1,13 @@
-// Place all the styles related to the Pages controller here.
+// Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700);
-
-html, body {
-  font-family: 'Droid Serif', serif;
+input.form-control, input.form-control:focus, 
+textarea.form-control, textarea.form-control:focus,
+select.form-control, select.form-control:focus {
+  border-width: 2px;
+  box-shadow: none;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   -moz-transition: none;
+   -webkit-transition: none;
 }
