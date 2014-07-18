@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140716225837) do
+ActiveRecord::Schema.define(version: 20140718174356) do
+
+  create_table "form_fields", force: true do |t|
+    t.string   "label"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"
